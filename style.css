@@ -1,0 +1,121 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  background: #2f363e;
+  justify-content: center;
+}
+
+#clockContainer {
+  display: flex;
+  position: relative;
+  align-items: center;
+  border-radius: 20px;
+  justify-content: center;
+  border-top-left-radius: 225px;
+  border-top-right-radius: 225px;
+  inset: -5px -5px 15px rgba(0, 0, 0, 75);
+  inset: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  inset: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.75),
+    10px 10px 70px rgba(0, 0, 0, 0.25);
+}
+
+.clock {
+  width: 450px;
+  display: flex;
+  height: 450px;
+  position: relative;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  align-items: center;
+  background: #2f363e;
+  justify-content: center;
+  inset: -5px -5px 15px rgba(0, 0, 0, 75);
+  inset: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  inset: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.75);
+}
+
+.clock::before {
+  z-index: 1;
+  content: "";
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  position: absolute;
+  background: black;
+}
+
+.clock span {
+  inset: 20px;
+  color: #fff;
+  position: absolute;
+  text-align: center;
+  transform: rotate(calc(30deg * var(--i)));
+}
+
+.clock span b {
+  opacity: 0.25;
+  font-size: 2em;
+  font-weight: 600;
+  display: inline-block;
+  transform: rotate(calc(-30de * var(--i)));
+}
+
+#hour,
+#minute,
+#second {
+  position: absolute;
+  background: black;
+  border-radius: 10px;
+  transform-origin: bottom;
+}
+
+.circle {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  position: absolute;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: flex-start;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+.circle2 {
+  width: 240px;
+  height: 240px;
+}
+
+.circle3 {
+  width: 180px;
+  height: 180px;
+}
+
+#hour {
+  top: 21%;
+  width: 1.8%;
+  left: 49.8%;
+  opacity: 0.8;
+  height: 25.2%;
+  background-color: #fee800;
+}
+
+#minute {
+  top: 14.5%;
+  width: 1.6%;
+  left: 49.8%;
+  opacity: 0.8;
+  height: 31.9%;
+  background-color: #ff2972;
+}
+
+#second {
+  top: 8%;
+  width: 1%;
+  height: 40%;
+  opacity: 0.8;
+  left: 49.25%;
+  background-color: #f00;
+}
